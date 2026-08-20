@@ -1,0 +1,413 @@
+.App {
+    min-height: 100vh;
+}
+
+.case-navbar {
+    background: #fff !important;
+    border-bottom: 4px solid #f0b400;
+}
+
+.case-navbar .navbar-brand,
+.case-navbar .navbar-text {
+    color: #24313f;
+}
+
+.case-primary-btn {
+    background: #f0b400;
+    border-color: #f0b400;
+    color: #111;
+}
+
+.case-primary-btn:hover,
+.case-primary-btn:focus {
+    background: #d99f00;
+    border-color: #d99f00;
+    color: #111;
+}
+
+.case-title-bar {
+    background: #f0b400;
+    color: #111;
+    padding: 10px 16px;
+    font-weight: 700;
+}
+
+.case-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.case-auth-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 24px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 480px;
+}
+
+.case-dashboard {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    background: #f5f5f5;
+}
+
+.case-sidebar {
+    width: 230px;
+    background: #111;
+    color: #fff;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.profile-block {
+    text-align: center;
+}
+
+.profile-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-block h5 {
+    margin-bottom: 2px;
+}
+
+.profile-block small {
+    word-break: break-word;
+}
+
+.sidebar-stats {
+    display: flex;
+    gap: 8px;
+    margin: 22px 0;
+}
+
+.sidebar-stats.single {
+    justify-content: center;
+}
+
+.sidebar-stats > div {
+    flex: 1;
+    text-align: center;
+}
+
+.sidebar-stats strong,
+.sidebar-stats span {
+    display: block;
+}
+
+.sidebar-stats span {
+    font-size: 11px;
+    color: #bbb;
+}
+
+.sidebar-link,
+.sidebar-logout {
+    border: 0;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    text-align: left;
+    padding: 10px 4px;
+    margin-bottom: 4px;
+}
+
+.sidebar-link:hover,
+.sidebar-logout:hover {
+    color: #f0b400;
+}
+
+.button-link {
+    width: 100%;
+}
+
+.sidebar-logout {
+    margin-top: auto;
+    border: 1px solid #555;
+    text-align: center;
+}
+
+.case-main {
+    flex: 1;
+    min-width: 0;
+    padding: 18px;
+    overflow-x: auto;
+}
+
+.case-header-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f0b400;
+    padding: 8px 14px;
+}
+
+.case-search {
+    max-width: 420px;
+}
+
+.case-app-name {
+    margin-left: auto;
+    font-weight: 700;
+}
+
+.project-selector {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 18px 0;
+}
+
+.project-summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 14px;
+    background: #fff;
+    border: 0;
+    padding: 16px;
+}
+
+.dashboard-heading {
+    margin: 18px 0 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.project-summary strong,
+.project-summary span {
+    display: block;
+}
+
+.project-summary strong {
+    font-size: 13px;
+}
+
+.project-summary span {
+    margin-top: 5px;
+}
+
+.status-board {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(210px, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+    min-width: 900px;
+}
+
+.status-column {
+    background: #f2f2f2;
+    border: 0;
+    min-height: 350px;
+    padding: 0 10px 10px;
+}
+
+.status-column h5 {
+    text-align: center;
+    border-top: 4px solid #e63b4d;
+    background: #e5e5e5;
+    padding: 10px 8px;
+    margin: 0 -10px 10px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.status-column:nth-child(2) h5 { border-top-color: #f0b400; }
+.status-column:nth-child(3) h5 { border-top-color: #2b9cc4; }
+.status-column:nth-child(4) h5 { border-top-color: #159b43; }
+
+.status-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    margin-left: 6px;
+    border-radius: 50%;
+    background: #e63b4d;
+    color: #fff;
+    font-size: 11px;
+}
+
+.status-column:nth-child(2) .status-count { background: #f0b400; }
+.status-column:nth-child(3) .status-count { background: #2b9cc4; }
+.status-column:nth-child(4) .status-count { background: #159b43; }
+
+.issue-card {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.issue-card:hover {
+    border-color: #f0b400;
+}
+
+.issue-card strong,
+.issue-card span,
+.issue-card small,
+.issue-card em {
+    display: block;
+}
+
+.issue-card span {
+    font-weight: 600;
+    margin: 4px 0;
+}
+
+.issue-card small {
+    color: #666;
+    max-height: 42px;
+    overflow: hidden;
+}
+
+.issue-card em {
+    font-size: 11px;
+    margin-top: 7px;
+    font-style: normal;
+}
+
+.empty-state {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.case-form-page {
+    min-height: calc(100vh - 60px);
+    background: #f5f5f5;
+    padding: 30px 18px;
+}
+
+.case-form-card {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.case-form-card.wide {
+    max-width: 1050px;
+}
+
+.issue-details-grid p {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+    .project-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .case-sidebar {
+        width: 190px;
+    }
+}
+
+@media (max-width: 650px) {
+    .case-dashboard {
+        display: block;
+    }
+
+    .case-sidebar {
+        width: 100%;
+    }
+
+    .sidebar-logout {
+        margin-top: 10px;
+    }
+
+    .project-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .case-header-row {
+        display: block;
+    }
+
+    .case-app-name {
+        margin-top: 8px;
+    }
+}
+
+.issue-assignee {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 7px;
+}
+
+.issue-assignee img,
+.detail-profile-image {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.detail-profile-image {
+    vertical-align: middle;
+    margin: 0 5px;
+}
+/* filename: dashboard.css */
+/* Code Generated by Sidekick is for learning and experimentation purposes only. */
+.issue-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* assignee left, priority right */
+    gap: 8px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.issue-assignee {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0; /* lets long names truncate instead of pushing priority off */
+}
+
+.issue-assignee img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.issue-assignee span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.issue-priority {
+    flex-shrink: 0;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 600;
+}
+

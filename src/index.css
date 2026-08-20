@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f5f5f5;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.case-primary-btn {
+  background-color: white !important;  
+  color: #0A0A0A !important;
+  border: 1px solid #0A0A0A !important;   /* black border, always visible */
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+/* Enabled hover -> yellow */
+.case-primary-btn:hover:not(:disabled) {
+  background-color: #E8A317 !important;   /* yellow on hover */
+  border-color: #0A0A0A !important;
+  color: #0A0A0A !important;
+}
+
+/* Disabled look: greyed out but border still visible */
+.case-primary-btn:disabled {
+  background-color: #E6E6E6 !important;
+  border: 1px solid #0A0A0A !important;
+  color: #9A9A9A !important;
+  cursor: not-allowed;
+}
+
+* ---------- Layout shell ---------- */
+.case-dashboard {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+  background: #F5F5F5;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* ---------- Sidebar ---------- */
+.case-sidebar {
+  background: #282728;
+  color: #FFFFFF;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-block {
+  text-align: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.profile-image {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #86BC25;
+}
+
+.profile-block h5 { margin: 8px 0 2px; }
+.profile-block small { color: #B8B8B8; }
+
+/* equal-size stat tiles */
+.sidebar-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.sidebar-stats > div {
+  background: #1A1A1A;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-stats strong { font-size: 20px; color: #86EB22; }
+.sidebar-stats span { font-size: 12px; color: #B8B8B8; }
+
+.sidebar-link {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+}
+.sidebar-link:hover { background: rgba(134, 188, 37, 0.2); }
+
+.sidebar-logout {
+  margin-top: auto;
+  padding: 10px 12px;
+  border: 1px solid #86BC25;
+  background: transparent;
+  color: #86EB22;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+.sidebar-logout:hover { background: #86BC25; color: #0A0A0A; }
+
+/* ---------- Main area ---------- */
+.case-main { padding: 24px 32px; }
+
+.case-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.case-search { max-width: 360px; }
+
+.case-app-name {
+  font-weight: 700;
+  font-size: 18px;
+  color: #0A0A0A;
+}
+
+.dashboard-heading {
+  font-weight: 700;
+  margin: 16px 0;
+}
+
+/* ---------- Project summary: equal cards ---------- */
+.project-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: stretch;           /* all cells same height */
+}
+
+.project-summary > div {
+  background: #FFFFFF;
+  border: 1px solid #E6E6E6;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 96px;               /* forces equal minimum height */
+}
+
+.project-summary label,
+.project-summary strong {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0A0A0A;
+}
+
+.project-summary .form-select { margin-top: 4px; }
+
+/* ---------- Status board: equal columns ---------- */
+.status-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.status-column {
+  background: #282728;
+  border: 1px solid #E6E6E6;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 200px;
+}
+
+.status-column > h5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #86BC25;
+}
+
+.status-count {
+  background: #86BC25;
+  color: #0A0A0A;
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: 12px;
+}
+
+/* ---------- Issue cards: uniform size ---------- */
+.issue-card {
+  width: 100%;
+  text-align: left;
+  background: #F5F5F5;
+  border: 1px solid #E6E6E6;
+  border-left: 4px solid #00A3E0;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: box-shadow 150ms ease, transform 150ms ease;
+}
+
+.issue-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.issue-card strong { color: #005587; }
+.issue-card span { font-weight: 600; color: #0A0A0A; }
+.issue-card small { color: #6B6B6B; font-size: 12px; }
+.issue-card em { font-size: 12px; font-weight: 600; color: #E8A317; font-style: normal; }
+
+.issue-assignee {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.issue-assignee img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ---------- Empty state ---------- */
+.empty-state {
+  text-align: center;
+  padding: 64px 16px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .case-dashboard { grid-template-columns: 1fr; }
+}
